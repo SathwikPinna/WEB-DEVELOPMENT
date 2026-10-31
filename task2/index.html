@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Sathwik Pinna, Web Development Intern showcasing advanced CSS3 architecture and responsive layouts.">
+    <title>Sathwik Pinna | Web Developer Portfolio</title>
+    <!-- Linked CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Main Navigation -->
+    <header>
+        <div class="logo">Sathwik Pinna</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <h1>Hi, I'm Sathwik Pinna</h1>
+            <p>Web Development Intern specializing in responsive architecture and modern CSS layouts.</p>
+            <a href="#projects" role="button">View My Work</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer focused on writing clean, semantic code and designing fluid layouts using CSS Grid, Flexbox, and custom theme variables.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Accessible Portfolio Website</h3>
+                    <p>A fully semantic, screen-reader friendly personal portfolio built with modern HTML5 standards.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Responsive Dashboard</h3>
+                    <p>An advanced CSS Grid and Flexbox layout tailored for cross-device responsiveness.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sathwik Pinna. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
