@@ -1,0 +1,227 @@
+/* Custom CSS Variables & Dynamic Light/Dark Theme Tokens */
+:root {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0f172a;
+        --text-color: #f8fafc;
+        --primary-color: #3b82f6;
+        --primary-hover: #60a5fa;
+        --card-bg: #1e293b;
+        --border-color: #334155;
+        --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+    }
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header & Flexbox Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content Area using CSS Grid */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    gap: 4rem;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    margin-bottom: 2rem;
+}
+
+#hero a[role="button"] {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+#hero a[role="button"]:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Contact Form Styling */
+form {
+    display: grid;
+    gap: 1.25rem;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 500;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+        gap: 2.5rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
